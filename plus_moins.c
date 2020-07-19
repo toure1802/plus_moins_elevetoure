@@ -5,7 +5,14 @@
 
 int main ( int argc, char** argv )
 {
-    int choix_joueur = 6,nombreEntre = 0;
+    int choix_joueur = 0,nombreEntre = 0;
+    const int MAX = 100, MIN = 1;
+
+    // Génération du nombre aléatoire
+
+    srand(time(NULL));
+    choix_joueur = (rand() % (MAX - MIN + 1)) + MIN;
+
 
     /* La boucle du programme. Elle se répète tant que l'utilisateur n'a pas trouvé le nombre mystère */
 
