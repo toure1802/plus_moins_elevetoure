@@ -34,4 +34,66 @@ int main ( int argc, char** argv )
     
     return 0;
 }
+    /* La boucle du programme. Elle se répète tant que l'utilisateur
+    n'a pas trouvé le nombre mystère */
+    while(continuerPartie!=0)
+    {
+        finDuJeu = 1;
+        printf("\t*****************MENU PRINCIPALE*****************\n");
+        printf("Mode 1 joueur tapez 1\nMode 2 joueurs tapez 2\nVotre choix : ");
+        scanf("%d", &modeDuJeu);
+ {
 
+
+		        int valeur_trouver = 0, choix_joueur = 0, difficulte = 0;
+		        int nombreTape =0, rejouer=0, coups =0, nombres_essaie =0, modeJeu =0, niveauJeu =0;
+			const int MAX = 100, MIN = 1;
+			srand(time(NULL));
+
+
+		        printf("===Niveau De Difficulte===\n");
+		        printf("1. Niveau facile : Entre 1 et 100\n");
+		        printf("2. Niveau moyen : Entre 1 et 1000\n");
+		        printf("3. Niveau difficile : Entre 1 et 10000\n");
+		        scanf("%d", &difficulte);
+		        if (difficulte == 1)
+		           {
+		              int MAX = 100;
+			      valeur_trouver = (rand() % (MAX - MIN + 1)) + MIN;
+			      nombres_essaie =1000;
+			      nombres_essaie--;
+			      return plus_moins( valeur_trouver);
+
+
+
+
+		           }
+		        else if (difficulte == 2)
+		           {
+		              int MAX = 1000;
+			      valeur_trouver = (rand() % (MAX - MIN + 1)) + MIN;
+			      nombres_essaie = 25;
+			      nombres_essaie--;
+			      return plus_moins( valeur_trouver);
+
+
+
+
+		           }
+		         else if (difficulte == 3)
+		           {
+		              int MAX = 10000;
+			      valeur_trouver = (rand() % (MAX - MIN + 1)) + MIN;
+			      nombres_essaie = 10;
+			      nombres_essaie--;
+			      return plus_moins( valeur_trouver);
+
+
+
+
+		           }
+		         else
+		           {
+		              printf("Vous vous êtes trompé de touch\n");
+		           }
+		  } 
